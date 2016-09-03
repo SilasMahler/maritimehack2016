@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Vessel} from "../main/application";
 import {BackendService} from "../services/backend";
+import {Vessel} from "../entities/vessel";
 
 @Component({
   selector:    'ship-list',
