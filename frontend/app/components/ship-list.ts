@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ShipService} from "../services/ship";
-import {Ship} from "../main/vesseltrip";
+import {Vessel} from "../main/vesseltrip";
 
 @Component({
   selector:    'ship-list',
@@ -8,8 +8,8 @@ import {Ship} from "../main/vesseltrip";
   providers:   [ ShipService ]
 })
 export class ShipListComponent implements OnInit {
-  ships: Ship[];
-  selectedShip: Ship;
+  ships: Vessel[];
+  selectedShip: Vessel;
 
   constructor(private service: ShipService) { }
 
@@ -17,5 +17,5 @@ export class ShipListComponent implements OnInit {
     this.ships = this.service.getShips();
   }
 
-  selectShip(ship: Ship) { this.selectedShip = ship; }
+  selectShip(ship: Vessel) { this.selectedShip = ship; }
 }

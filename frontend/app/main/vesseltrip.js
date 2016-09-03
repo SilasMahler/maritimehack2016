@@ -24,10 +24,10 @@ var VesselTripApp = (function () {
     return VesselTripApp;
 }());
 exports.VesselTripApp = VesselTripApp;
-var Ship = (function () {
-    function Ship() {
+var Vessel = (function () {
+    function Vessel() {
     }
-    return Ship;
+    return Vessel;
 }());
-exports.Ship = Ship;
+exports.Vessel = Vessel;
 //# sourceMappingURL=vesseltrip.js.map

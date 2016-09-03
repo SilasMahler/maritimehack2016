@@ -14,14 +14,14 @@ import { Component } from '@angular/core';
 })
 export class VesselTripApp {
     title = 'Tour of Heroes';
-    ship: Ship = {
+    ship: Vessel = {
         id: 1,
         name: 'Tolkien',
         length: '200m'
     };
 }
 
-export class Ship {
+export class Vessel {
     id: number;
     name: string;
     length: string;
