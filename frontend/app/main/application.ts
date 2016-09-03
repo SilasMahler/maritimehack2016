@@ -17,17 +17,17 @@ export class Application {
     title = 'App for Vesseltrips';
     vessel: Vessel = {
         id: 1,
-        name: 'Tolkien',
-        type: string,
-    length: number,
-    beam: number,
-    manager: string,
-    owner: string,
-    insurer: string,
-    eng_bulder: string
+        name: 'Flösschen',
+        type: 'Floting Thing',
+        length: 200,
+        beam: 10,
+        manager: 'Gordon',
+        owner: 'Gordon',
+        insurer: 'Gordon',
+        eng_bulder: 'Gordon'
 
-}
-;
+    }
+        ;
 }
 
 
