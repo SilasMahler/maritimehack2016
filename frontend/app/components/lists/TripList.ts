@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {BackendService} from "../services/backend";
-import {Trip} from "../entities/trip";
+import {BackendService} from "../../services/backend";
+import {Trip} from "../../entities/trip";
 
 @Component({
     selector:    'trip-list',
