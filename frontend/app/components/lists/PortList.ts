@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {BackendService} from "../services/backend";
-import {Port} from "../entities/port";
+import {BackendService} from "../../services/backend";
+import {Port} from "../../entities/port";
 
 @Component({
     selector:    'port-list',

@@ -1,3 +1,7 @@
-/**
- * Created by Silas on 04.09.2016.
- */
+import {Component} from '@angular/core';
+
+@Component({
+    selector:    'login',
+    templateUrl: 'app/login.html',
+})
+export class Login {}

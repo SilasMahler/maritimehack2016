@@ -1,3 +1,7 @@
-/**
- * Created by Silas on 04.09.2016.
- */
+import {Component} from '@angular/core';
+
+@Component({
+    selector:    'mytrips',
+    templateUrl: 'app/mytrips.html',
+})
+export class MyTrips {}
