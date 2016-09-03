@@ -5,28 +5,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var core_1 = require('@angular/core');
 var backend_1 = require("../services/backend");
-var VesselList = (function () {
-    function VesselList(service) {
+var TripList = (function () {
+    function TripList(service) {
         this.service = service;
     }
-    VesselList.prototype.ngOnInit = function () {
-        this.vessels = this.service.getVessels();
+    TripList.prototype.ngOnInit = function () {
+        this.trips = this.service.getTrips();
     };
-    VesselList.prototype.selectVessel = function (vessel) { this.selectedVessel = vessel; };
-    VesselList = __decorate([
+    TripList.prototype.selectTrip = function (trip) { this.selectedTrip = trip; };
+    TripList = __decorate([
         core_1.Component({
-            selector: 'ship-list',
-            templateUrl: 'app/vessel-list.html',
+            selector: 'trip-list',
+            templateUrl: 'app/trip-list.html',
             providers: [backend_1.BackendService]
-        }), 
-        __metadata('design:paramtypes', [backend_1.BackendService])
-    ], VesselList);
-    return VesselList;
+        })
+    ], TripList);
+    return TripList;
 }());
-exports.VesselList = VesselList;
-//# sourceMappingURL=VesselList.js.map
+exports.TripList = TripList;
+//# sourceMappingURL=TripList.js.map

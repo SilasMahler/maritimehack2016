@@ -1,22 +1,19 @@
-import { Routes, RouterModule } from '@angular/router';
-import {PortList} from "./PortList";
-import {TripList} from "./TripList";
-import {TripToPortList} from "./TripToPortList";
-import {VesselList} from "./VesselList";
+import {Routes, RouterModule} from '@angular/router';
 import {ModuleWithProviders} from "@angular/core";
-import {PageNotFound} from "./PageNotFound";
+import {PageNotFound} from "./nav/PageNotFound";
+import {Login} from "./nav/login";
+import {Logout} from "./nav/logout";
+import {Explore} from "./nav/explore";
+import {MyTrips} from "./nav/mytrips";
 
 const vesseltripRoutes: Routes = [
-    { path: 'port-list', component: PortList },
-    { path: 'trip-list', component: TripList},
-    { path: 'vessel/:id', component: VesselList },
-    { path: 'triptoport-list', component: TripToPortList },
-    { path: '**', component: PageNotFound }
+    {path: 'login', component: Login},
+    {path: 'logout', component: Logout},
+    {path: 'explore', component: Explore},
+    {path: 'mytrips', component: MyTrips},
+    {path: '**', component: PageNotFound}
 
 ];
-
-export const appRoutingProviders: any[] = [
-
-];
+export const appRoutingProviders: any[] = [];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(vesseltripRoutes);

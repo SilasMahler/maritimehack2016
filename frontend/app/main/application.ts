@@ -1,12 +1,13 @@
 import {Component, NgModule} from '@angular/core';
 import {Vessel} from "../entities/vessel";
-import {PortList} from "../components/PortList";
-import {TripToPortList} from "../components/TripToPortList";
-import {TripList} from "../components/TripList";
-import {VesselList} from "../components/VesselList";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
 import {routing, appRoutingProviders} from "../components/routing";
+import {Logout} from "../components/nav/logout";
+import {Login} from "../components/nav/login";
+import {Explore} from "../components/nav/explore";
+import {MyTrips} from "../components/nav/mytrips";
+import {PageNotFound} from "../components/nav/PageNotFound";
 
 
 @NgModule({
@@ -17,10 +18,11 @@ import {routing, appRoutingProviders} from "../components/routing";
     ],
     declarations: [
         Application,
-        PortList,
-        TripToPortList,
-        TripList,
-        VesselList
+        Login,
+        Logout,
+        Explore,
+        MyTrips,
+        PageNotFound
     ],
     providers: [
         appRoutingProviders
@@ -30,10 +32,11 @@ import {routing, appRoutingProviders} from "../components/routing";
 @Component({
     selector: 'application',
     template: ' <h1>Component Router</h1> <nav> ' +
-    '<a routerLink="/" routerLinkActive="active">Home</a>' +
+    '<a routerLink="/login" routerLinkActive="active">Login</a> ' +
+    '<a routerLink="/logout" routerLinkActive="active">Logout</a> ' +
     '<a routerLink="/explore" routerLinkActive="active">Explore</a> ' +
-    '<a routerLink="/port-list" routerLinkActive="active">PortList</a> ' +
-    '<a routerLink="/contact" routerLinkActive="active">Contact</a> ' +
+    '<a routerLink="/mytrips" routerLinkActive="active">My Trips</a> ' +
+    '<a routerLink="**" routerLinkActive="active">Contact</a> ' +
     '</nav> ' +
     '<router-outlet></router-outlet>'
 })
