@@ -7,22 +7,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require('@angular/core');
 var backend_1 = require("../services/backend");
-var TripList = (function () {
-    function TripList(service) {
+var PortList = (function () {
+    function PortList(service) {
         this.service = service;
     }
-    TripList.prototype.ngOnInit = function () {
-        this.trips = this.service.getTrips();
+    PortList.prototype.ngOnInit = function () {
+        this.ports = this.service.getPorts();
     };
-    TripList.prototype.selectShip = function (port) { this.selectedPort = port; };
-    TripList = __decorate([
+    PortList.prototype.selectShip = function (port) { this.selectedPort = port; };
+    PortList = __decorate([
         core_1.Component({
             selector: 'port-list',
             templateUrl: 'app/port-list.html',
             providers: [backend_1.BackendService]
         })
-    ], TripList);
-    return TripList;
+    ], PortList);
+    return PortList;
 }());
-exports.TripList = TripList;
+exports.PortList = PortList;
 //# sourceMappingURL=PortList.js.map

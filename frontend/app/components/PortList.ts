@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {BackendService} from "../services/backend";
-import {Trip} from "../entities/trip";
 import {Port} from "../entities/port";
 
 @Component({
@@ -8,14 +7,14 @@ import {Port} from "../entities/port";
     templateUrl: 'app/port-list.html',
     providers:   [ BackendService ]
 })
-export class TripList implements OnInit {
+export class PortList implements OnInit {
     ports: Port[];
     selectedPort: Port;
 
     constructor(private service: BackendService) { }
 
     ngOnInit() {
-        this.trips = this.service.getTrips();
+        this.ports = this.service.getPorts();
     }
 
     selectShip(port: Port) { this.selectedPort = port; }
