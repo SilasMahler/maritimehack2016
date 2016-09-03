@@ -23,6 +23,16 @@ function initialize() {
     var content = JSON.parse(data);
     map.data.addGeoJson(content);
   });
+
+  $.get("https://vesseltrip.schroeer.co/ports", function (data, status) {
+    var content = JSON.parse(data);
+    for (var i = 0; i < content.length; i++) {
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(content[i].lon, content[i].lat)
+      });
+      marker.setMap(map);
+    }
+  });
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
