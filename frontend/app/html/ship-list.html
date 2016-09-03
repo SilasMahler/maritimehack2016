@@ -1,0 +1,8 @@
+<h2>Ship List</h2>
+<p><i>Pick a ship from the list</i></p>
+<ul>
+    <li *ngFor="let Ship of ships" (click)="selectShip(ship)">
+        {{hero.name}}
+    </li>
+</ul>
+<ship-detail *ngIf="selectedShip" [ship]="selectedShip"></ship-detail>

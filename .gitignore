@@ -36,3 +36,5 @@ app/styles/
 docs/
 gulpfile.js
 package.json
+backend/src/
+node_modules/
