@@ -18,3 +18,22 @@ hs_err_pid*
 
 # Windows
 Thumbs.db
+.editorconfig
+.gitattributes
+.gitignore
+.travis.yml
+LICENSE
+README.md
+app/basic.html
+app/favicon.ico
+app/humans.txt
+app/images/
+app/manifest.json
+app/manifest.webapp
+app/robots.txt
+app/scripts/
+app/service-worker.js
+app/styles/
+docs/
+gulpfile.js
+package.json
