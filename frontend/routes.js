@@ -1,4 +1,5 @@
-var route = {
+//in route die Geodaten der einzelnen Routen speichern
+var route = [{
   "type": "FeatureCollection",
   "features": [
     {
@@ -31,7 +32,40 @@ var route = {
       }
     }
   ]
-};
+}, {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            63.0419921875,
+            63.31774904749089
+          ],
+          [
+            68.14208984375,
+            60.45750402042058
+          ],
+          [
+            66.25244140625,
+            62.802761415419674
+          ],
+          [
+            69.7021484375,
+            63.86548550842127
+          ],
+          [
+            60.77880859375,
+            63.46189043285914
+          ]
+        ]
+      }
+    }
+  ]
+}];
 
 function initialize() {
   var mapProp = {
@@ -54,7 +88,9 @@ function initialize() {
     }
   });
 
-  map.data.addGeoJson(route);
+  for (var i = 0; i < route.length; i++) {
+    map.data.addGeoJson(route[i]);
+  }
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
