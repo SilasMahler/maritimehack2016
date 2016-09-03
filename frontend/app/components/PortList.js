@@ -6,23 +6,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var ship_1 = require("../services/ship");
-var ShipListComponent = (function () {
-    function ShipListComponent(service) {
+var backend_1 = require("../services/backend");
+var TripList = (function () {
+    function TripList(service) {
         this.service = service;
     }
-    ShipListComponent.prototype.ngOnInit = function () {
-        this.ships = this.service.getShips();
+    TripList.prototype.ngOnInit = function () {
+        this.trips = this.service.getTrips();
     };
-    ShipListComponent.prototype.selectShip = function (ship) { this.selectedShip = ship; };
-    ShipListComponent = __decorate([
+    TripList.prototype.selectShip = function (port) { this.selectedPort = port; };
+    TripList = __decorate([
         core_1.Component({
-            selector: 'ship-list',
-            templateUrl: 'app/ship-list.html',
-            providers: [ship_1.ShipService]
+            selector: 'port-list',
+            templateUrl: 'app/port-list.html',
+            providers: [backend_1.BackendService]
         })
-    ], ShipListComponent);
-    return ShipListComponent;
+    ], TripList);
+    return TripList;
 }());
-exports.ShipListComponent = ShipListComponent;
-//# sourceMappingURL=ship-list.js.map
+exports.TripList = TripList;
+//# sourceMappingURL=PortList.js.map

@@ -1,0 +1,8 @@
+<h2>Vessel List</h2>
+<p><i>Pick a vessel from the list</i></p>
+<ul>
+    <li *ngFor="let Vessel of vessels" (click)="selectVessel(vessel)">
+        {{vessel.name}}
+    </li>
+</ul>
+<ship-detail *ngIf="selectedVessel" [vessel]="selectedVessel"></ship-detail>

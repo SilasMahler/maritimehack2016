@@ -26,7 +26,7 @@ var BackendService = (function () {
     BackendService.prototype.getTripToPorts = function () {
         return null;
     };
-    BackendService.prototype.getAll = function (ship) {
+    BackendService.prototype.getAll = function (vessel) {
         return null;
     };
     return BackendService;

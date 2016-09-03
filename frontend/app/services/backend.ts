@@ -30,7 +30,7 @@ export class BackendService {
 
     }
 
-    getAll(ship: Vessel) {
+    getAll(vessel: Vessel) {
         return null;
     }
 }
