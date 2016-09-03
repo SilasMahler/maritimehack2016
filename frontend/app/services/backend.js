@@ -2,20 +2,23 @@
 /**
  * Created by Silas on 03.09.2016.
  */
-var vesseltrip_1 = require("../main/vesseltrip");
+var application_1 = require("../main/application");
 var BackendService = (function () {
     function BackendService(backendService, logger) {
         this.backendService = backendService;
         this.logger = logger;
-        this.ships = [];
+        this.vessels = [];
+        this.ports = [];
+        this.trips = [];
+        this.tripsToPorts = [];
     }
     BackendService.prototype.getVessels = function () {
         var _this = this;
-        this.backendService.getAll(vesseltrip_1.Vessel).then(function (ships) {
-            (_a = _this.ships).push.apply(_a, ships); // fill cache
+        this.backendService.getAll(application_1.Vessel).then(function (vessels) {
+            (_a = _this.vessels).push.apply(_a, vessels); // fill cache
             var _a;
         });
-        return this.ships;
+        return this.vessels;
     };
     BackendService.prototype.getTrips = function () {
         return null;

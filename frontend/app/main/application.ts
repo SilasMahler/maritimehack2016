@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Vessel} from "../entities/vessel";
 
 @Component({
-    selector: 'vesseltripapp',
+    selector: 'application',
     template: `
     <h1>{{title}}</h1>
     <h2>{{ship.name}} details!</h2>
@@ -13,13 +13,21 @@ import {Vessel} from "../entities/vessel";
     </div>
     `
 })
-export class VesselTripApp {
+export class Application {
     title = 'App for Vesseltrips';
-    ship: Vessel = {
+    vessel: Vessel = {
         id: 1,
         name: 'Tolkien',
-        length: '200m'
-    };
+        type: string,
+    length: number,
+    beam: number,
+    manager: string,
+    owner: string,
+    insurer: string,
+    eng_bulder: string
+
+}
+;
 }
 
 
