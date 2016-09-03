@@ -1,5 +1,6 @@
 node_modules/
 build/
+src/backend/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
