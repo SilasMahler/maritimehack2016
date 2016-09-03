@@ -1,12 +1,10 @@
-import {Component, View, NgFor, NgClass, EventEmitter} from '@angular/core';
+import {Component, NgFor, NgClass, EventEmitter} from '@angular/core';
 
 
 @Component({
     selector: 'rating',
     inputs: ['rate'],
-    outputs: ['updateRate: rateChange']
-})
-@View({
+    outputs: ['updateRate: rateChange'],
     template: `
     <span tabindex="0">
       <template ng-for [ng-for-of]="range" #index="index">
