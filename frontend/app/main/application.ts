@@ -1,17 +1,41 @@
-import {Component} from '@angular/core';
+import {Component, NgModule} from '@angular/core';
 import {Vessel} from "../entities/vessel";
+import {PortList} from "../components/PortList";
+import {TripToPortList} from "../components/TripToPortList";
+import {TripList} from "../components/TripList";
+import {VesselList} from "../components/VesselList";
+import {BrowserModule} from "@angular/platform-browser";
+import {FormsModule} from "@angular/forms";
+import {routing, appRoutingProviders} from "../components/routing";
 
+
+@NgModule({
+    imports: [
+        BrowserModule,
+        FormsModule,
+        routing
+    ],
+    declarations: [
+        Application,
+        PortList,
+        TripToPortList,
+        TripList,
+        VesselList
+    ],
+    providers: [
+        appRoutingProviders
+    ],
+    bootstrap: [ Application ]
+})
 @Component({
     selector: 'application',
-    template: `
-    <h1>{{title}}</h1>
-    <h2>{{ship.name}} details!</h2>
-    <div><label>id: </label>{{ship.id}}</div>
-    <div>
-      <label>name: </label>
-      <input [(ngModel)]="ship.name" placeholder="name">
-    </div>
-    `
+    template: ' <h1>Component Router</h1> <nav> ' +
+    '<a routerLink="/" routerLinkActive="active">Home</a>' +
+    '<a routerLink="/explore" routerLinkActive="active">Explore</a> ' +
+    '<a routerLink="/port-list" routerLinkActive="active">PortList</a> ' +
+    '<a routerLink="/contact" routerLinkActive="active">Contact</a> ' +
+    '</nav> ' +
+    '<router-outlet></router-outlet>'
 })
 export class Application {
     title = 'App for Vesseltrips';
@@ -25,9 +49,6 @@ export class Application {
         owner: 'Gordon',
         insurer: 'Gordon',
         eng_bulder: 'Gordon'
-
-    }
-        ;
+    };
 }
-
 

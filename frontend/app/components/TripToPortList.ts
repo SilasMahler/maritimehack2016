@@ -17,5 +17,5 @@ export class TripToPortList implements OnInit {
         this.tripsToPorts = this.service.getTripToPorts();
     }
 
-    selectShip(tripToPort: TripToPort) { this.selectedTripToPort = tripToPort; }
+    selectTripToPort(tripToPort: TripToPort) { this.selectedTripToPort = tripToPort; }
 }

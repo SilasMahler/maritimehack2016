@@ -17,7 +17,7 @@ var TripList = (function () {
     TripList.prototype.ngOnInit = function () {
         this.trips = this.service.getTrips();
     };
-    TripList.prototype.selectShip = function (trip) { this.selectedTrip = trip; };
+    TripList.prototype.selectTrip = function (trip) { this.selectedTrip = trip; };
     TripList = __decorate([
         core_1.Component({
             selector: 'trip-list',

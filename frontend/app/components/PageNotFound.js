@@ -9,24 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var backend_1 = require("../services/backend");
-var TripToPortList = (function () {
-    function TripToPortList(service) {
-        this.service = service;
+var PageNotFound = (function () {
+    function PageNotFound() {
     }
-    TripToPortList.prototype.ngOnInit = function () {
-        this.tripsToPorts = this.service.getTripToPorts();
-    };
-    TripToPortList.prototype.selectTripToPort = function (tripToPort) { this.selectedTripToPort = tripToPort; };
-    TripToPortList = __decorate([
+    PageNotFound = __decorate([
         core_1.Component({
-            selector: 'triptoport-list',
-            templateUrl: 'app/triptoport-list.html',
-            providers: [backend_1.BackendService]
+            selector: 'page-not-found',
+            templateUrl: 'app/page-not-found.html',
         }), 
-        __metadata('design:paramtypes', [backend_1.BackendService])
-    ], TripToPortList);
-    return TripToPortList;
+        __metadata('design:paramtypes', [])
+    ], PageNotFound);
+    return PageNotFound;
 }());
-exports.TripToPortList = TripToPortList;
-//# sourceMappingURL=TripToPortList.js.map
+exports.PageNotFound = PageNotFound;
+//# sourceMappingURL=PageNotFound.js.map

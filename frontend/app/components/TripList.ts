@@ -17,5 +17,5 @@ export class TripList implements OnInit {
         this.trips = this.service.getTrips();
     }
 
-    selectShip(trip: Trip) { this.selectedTrip = trip; }
+    selectTrip(trip: Trip) { this.selectedTrip = trip; }
 }
