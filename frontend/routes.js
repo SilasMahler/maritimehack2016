@@ -26,11 +26,33 @@ function initialize() {
 
   $.get("https://vesseltrip.schroeer.co/ports", function (data, status) {
     var content = JSON.parse(data);
+    var markers=[];
+    var infowindows = [];
     for (var i = 0; i < content.length; i++) {
-      var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(content[i].lon, content[i].lat)
+      markers[i] = new google.maps.Marker({
+        position: new google.maps.LatLng(content[i].lon, content[i].lat),
+        map: map,
+        title: 'samplemarker'
       });
-      marker.setMap(map);
+
+      markers[i].index = i;
+
+      infowindows[i] = new google.maps.InfoWindow({
+        content: content[i].name
+      });
+
+      google.maps.event.addListener(markers[i], 'click', function() {
+        for (var j = 0; j < infowindows.length; j++) {
+          infowindows[j].close();
+        }
+        infowindows[this.index].open(map,markers[this.index]);
+        map.panTo(markers[this.index].getPosition());
+      });
+
+
+
+
+
     }
   });
 }
