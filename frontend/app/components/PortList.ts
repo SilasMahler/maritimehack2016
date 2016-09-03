@@ -17,5 +17,6 @@ export class PortList implements OnInit {
         this.ports = this.service.getPorts();
     }
 
-    selectShip(port: Port) { this.selectedPort = port; }
+    selectPort(port: Port) { this.selectedPort = port; }
+
 }

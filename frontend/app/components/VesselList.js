@@ -17,7 +17,7 @@ var VesselList = (function () {
     VesselList.prototype.ngOnInit = function () {
         this.vessels = this.service.getVessels();
     };
-    VesselList.prototype.selectShip = function (vessel) { this.selectedVessel = vessel; };
+    VesselList.prototype.selectVessel = function (vessel) { this.selectedVessel = vessel; };
     VesselList = __decorate([
         core_1.Component({
             selector: 'ship-list',

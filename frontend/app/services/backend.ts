@@ -6,15 +6,18 @@ import {Port} from "../entities/port";
 import {TripToPort} from "../entities/trip_to_port";
 import {Trip} from "../entities/trip";
 import {Vessel} from "../entities/vessel";
+import {Injectable} from "@angular/core";
+
+
+
+@Injectable()
 export class BackendService {
     private vessels: Vessel[] = [];
     private ports: Port[] = [];
     private trips: Trip[] = [];
     private  tripsToPorts: TripToPort[] = [];
 
-    constructor(
-        private backendService: BackendService,
-        private logger: Logger) { }
+    constructor(private backendService: BackendService) { }
 
     getVessels():Vessel[] {
         return null;

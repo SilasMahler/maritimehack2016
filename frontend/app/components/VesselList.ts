@@ -17,5 +17,5 @@ export class VesselList implements OnInit {
     this.vessels = this.service.getVessels();
   }
 
-  selectShip(vessel: Vessel) { this.selectedVessel = vessel; }
+  selectVessel(vessel: Vessel) { this.selectedVessel = vessel; }
 }

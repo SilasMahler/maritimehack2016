@@ -17,7 +17,7 @@ var PortList = (function () {
     PortList.prototype.ngOnInit = function () {
         this.ports = this.service.getPorts();
     };
-    PortList.prototype.selectShip = function (port) { this.selectedPort = port; };
+    PortList.prototype.selectPort = function (port) { this.selectedPort = port; };
     PortList = __decorate([
         core_1.Component({
             selector: 'port-list',
