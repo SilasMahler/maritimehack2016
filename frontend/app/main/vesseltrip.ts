@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Vessel} from "../entities/vessel";
 
 @Component({
     selector: 'vesseltripapp',
@@ -13,19 +14,12 @@ import { Component } from '@angular/core';
     `
 })
 export class VesselTripApp {
-    title = 'Tour of Heroes';
+    title = 'App for Vesseltrips';
     ship: Vessel = {
         id: 1,
         name: 'Tolkien',
         length: '200m'
     };
-}
-
-export class Vessel {
-    id: number;
-    name: string;
-    length: string;
-    //...
 }
 
 
