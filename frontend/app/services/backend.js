@@ -11,7 +11,7 @@ var BackendService = (function () {
     }
     BackendService.prototype.getVessels = function () {
         var _this = this;
-        this.backendService.getAll(vesseltrip_1.Ship).then(function (ships) {
+        this.backendService.getAll(vesseltrip_1.Vessel).then(function (ships) {
             (_a = _this.ships).push.apply(_a, ships); // fill cache
             var _a;
         });
@@ -26,7 +26,7 @@ var BackendService = (function () {
     BackendService.prototype.getTripToPorts = function () {
         return null;
     };
-    BackendService.prototype.getAll = function (ship) {
+    BackendService.prototype.getAll = function (vessel) {
         return null;
     };
     return BackendService;

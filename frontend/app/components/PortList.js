@@ -5,17 +5,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-/**
- * Created by Silas on 03.09.2016.
- */
 var core_1 = require('@angular/core');
-var Vessel = (function () {
-    function Vessel() {
+var backend_1 = require("../services/backend");
+var PortList = (function () {
+    function PortList(service) {
+        this.service = service;
     }
-    Vessel = __decorate([
-        core_1.Component({ selector: 'vessel' })
-    ], Vessel);
-    return Vessel;
+    PortList.prototype.ngOnInit = function () {
+        this.ports = this.service.getPorts();
+    };
+    PortList.prototype.selectShip = function (port) { this.selectedPort = port; };
+    PortList = __decorate([
+        core_1.Component({
+            selector: 'port-list',
+            templateUrl: 'app/port-list.html',
+            providers: [backend_1.BackendService]
+        })
+    ], PortList);
+    return PortList;
 }());
-exports.Vessel = Vessel;
-//# sourceMappingURL=vessel.js.map
+exports.PortList = PortList;
+//# sourceMappingURL=PortList.js.map
