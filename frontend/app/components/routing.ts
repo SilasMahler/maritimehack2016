@@ -5,15 +5,15 @@ import {Login} from "./nav/login";
 import {Logout} from "./nav/logout";
 import {Explore} from "./nav/explore";
 import {MyTrips} from "./nav/mytrips";
+import {AppModule} from "../main/app.module";
+import {AppComponent} from "../app.component";
 
-const vesseltripRoutes: Routes = [
-    {path: 'login', component: Login},
-    {path: 'logout', component: Logout},
-    {path: 'explore', component: Explore},
-    {path: 'mytrips', component: MyTrips},
-    {path: '**', component: PageNotFound}
-
+const routes: Routes = [
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', component: AppComponent },
+    { path: 'explore', component: Explore },
+    { path: 'mytrips', component: MyTrips }
 ];
 export const appRoutingProviders: any[] = [];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(vesseltripRoutes);
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
