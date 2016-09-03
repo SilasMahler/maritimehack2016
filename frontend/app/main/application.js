@@ -5,17 +5,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var core_1 = require('@angular/core');
-var PortList_1 = require("../components/PortList");
-var TripToPortList_1 = require("../components/TripToPortList");
-var TripList_1 = require("../components/TripList");
-var VesselList_1 = require("../components/VesselList");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var routing_1 = require("../components/routing");
+var logout_1 = require("../components/nav/logout");
+var login_1 = require("../components/nav/login");
+var explore_1 = require("../components/nav/explore");
+var mytrips_1 = require("../components/nav/mytrips");
+var PageNotFound_1 = require("../components/nav/PageNotFound");
 var Application = (function () {
     function Application() {
         this.title = 'App for Vesseltrips';
@@ -40,10 +38,11 @@ var Application = (function () {
             ],
             declarations: [
                 Application,
-                PortList_1.PortList,
-                TripToPortList_1.TripToPortList,
-                TripList_1.TripList,
-                VesselList_1.VesselList
+                login_1.Login,
+                logout_1.Logout,
+                explore_1.Explore,
+                mytrips_1.MyTrips,
+                PageNotFound_1.PageNotFound
             ],
             providers: [
                 routing_1.appRoutingProviders
@@ -53,14 +52,14 @@ var Application = (function () {
         core_1.Component({
             selector: 'application',
             template: ' <h1>Component Router</h1> <nav> ' +
-                '<a routerLink="/" routerLinkActive="active">Home</a>' +
+                '<a routerLink="/login" routerLinkActive="active">Login</a> ' +
+                '<a routerLink="/logout" routerLinkActive="active">Logout</a> ' +
                 '<a routerLink="/explore" routerLinkActive="active">Explore</a> ' +
-                '<a routerLink="/port-list" routerLinkActive="active">PortList</a> ' +
-                '<a routerLink="/contact" routerLinkActive="active">Contact</a> ' +
+                '<a routerLink="/mytrips" routerLinkActive="active">My Trips</a> ' +
+                '<a routerLink="**" routerLinkActive="active">Contact</a> ' +
                 '</nav> ' +
                 '<router-outlet></router-outlet>'
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], Application);
     return Application;
 }());
