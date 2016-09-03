@@ -1,4 +1,3 @@
-//in route die Geodaten der einzelnen Routen speichern
 function initialize() {
   var mapProp = {
     center: new google.maps.LatLng(53.0419921875, 53.31774904749089),
@@ -16,19 +15,14 @@ function initialize() {
 
   map.data.addListener('click', function (event) {
     if (event.feature.getGeometry().getType() === 'LineString') {
-      //TODO:action
+      // TODO: action
     }
   });
 
-  $.get("https://vesseltrip.schroeer.co/trips", function (mydata, status) {
-    alert("Data: " + mydata);
-
-    var content = JSON.parse(mydata);
+  $.get("https://vesseltrip.schroeer.co/trips", function (data, status) {
+    var content = JSON.parse(data);
     map.data.addGeoJson(content);
-    
   });
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-
-
