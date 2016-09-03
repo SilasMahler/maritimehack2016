@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Vessel} from "../main/vesseltrip";
+import {Vessel} from "../main/application";
 import {BackendService} from "../services/backend";
 
 @Component({

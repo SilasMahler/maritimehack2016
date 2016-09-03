@@ -6,28 +6,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var VesselTripApp = (function () {
-    function VesselTripApp() {
-        this.title = 'Tour of Heroes';
-        this.ship = {
+var Application = (function () {
+    function Application() {
+        this.title = 'App for Vesseltrips';
+        this.vessel = {
             id: 1,
             name: 'Tolkien',
-            length: '200m'
+            type: string,
+            length: number,
+            beam: number,
+            manager: string,
+            owner: string,
+            insurer: string,
+            eng_bulder: string
         };
     }
-    VesselTripApp = __decorate([
+    Application = __decorate([
         core_1.Component({
-            selector: 'vesseltripapp',
+            selector: 'application',
             template: "\n    <h1>{{title}}</h1>\n    <h2>{{ship.name}} details!</h2>\n    <div><label>id: </label>{{ship.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"ship.name\" placeholder=\"name\">\n    </div>\n    "
         })
-    ], VesselTripApp);
-    return VesselTripApp;
+    ], Application);
+    return Application;
 }());
-exports.VesselTripApp = VesselTripApp;
-var Vessel = (function () {
-    function Vessel() {
-    }
-    return Vessel;
-}());
-exports.Vessel = Vessel;
-//# sourceMappingURL=vesseltrip.js.map
+exports.Application = Application;
+//# sourceMappingURL=application.js.map
