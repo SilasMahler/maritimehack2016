@@ -48,11 +48,6 @@ function initialize() {
         infowindows[this.index].open(map,markers[this.index]);
         map.panTo(markers[this.index].getPosition());
       });
-
-
-
-
-
     }
   });
 }
