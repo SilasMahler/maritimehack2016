@@ -42,12 +42,12 @@
         {% endfor %}  
     </head>
     {% endblock %}
-    <body>
+<body class="full">
     <div class="container">
       {% include 'components/jumbotron/main-nav.twig' %}
-      <div class="jumbotron">
+
         {% block content %}{% endblock %}
-      </div>	
+	
     </div> <!-- /container -->
     
     {# This block is for dynamic fragments of code that lie outside of the main DOM #}
