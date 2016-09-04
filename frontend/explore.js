@@ -13,6 +13,7 @@ function refreshData() {
 
     $.get("https://vesseltrip.schroeer.co/vessels", function (data, status) {
         var content = JSON.parse(data);
+        $("#ships_entries").empty();
         for (var i = 0; i < content.length; i++) {
             $("#ships_entries").append(
                 '<tr> ' +
@@ -33,6 +34,7 @@ function refreshData() {
 
     $.get("https://vesseltrip.schroeer.co/ports", function (data, status) {
         var content = JSON.parse(data);
+        $("#ports_entries").empty();
         for (var i = 0; i < content.length; i++) {
             $("#ports_entries").append(
                 '<tr> ' +
