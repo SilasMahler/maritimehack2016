@@ -16,7 +16,37 @@ function initialize() {
     map.data.addListener('click', function (event) {
         if (event.feature.getGeometry().getType() === 'LineString') {
             // TODO: action
-            window.location.replace("./rating_output.html");
+            //window.location.replace("./rating_output.html");
+            $('#ratingOutput').html("");
+
+
+            var appending = "<li><div class='content'><span class='row form-group'>" +
+                "<label for='foodRating' class='control-label'>Essen:</label>" +
+                "<div>" +
+                "<span id='foodRating'>4</span>" +
+                "</div>" +
+                "</span>" +
+                "<span class='row form-group'>" +
+                "<label for='captainRating' class='control-label'>Kapitän:</label>" +
+                "<div>" +
+                "<span id='captainRating'>4</span>" +
+                "</div>" +
+                "</span>" +
+                "<span class='row form-group'>" +
+                "<label for='cabinRating' class='control-label'>Kajüte:</label>" +
+                "<div>" +
+                "<pan id='cabinRating'>4</span>" +
+                "</div>" +
+                "</span>" +
+                "<span class='row form-group'>" +
+                "<label for='resume' class='control-label'>Ihr Bericht:</label>" +
+                "<div>" +
+                "<span id='resume'>Bewertung Zum Trip 123</span>" +
+                "</div>" +
+                "</span>" +
+                "</div></li>";
+            $('#ratingOutput').append(appending);
+            alert('appended');
         }
     });
 
