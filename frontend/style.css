@@ -1,8 +1,44 @@
 .content {
     margin-top: 50px;
     margin-bottom: 30px;
+    width: 300px;
 }
 
 .ratingInput {
     max-width: 50%;
+}
+
+.map {
+    width: calc(100% - 300px);
+    height: calc(100vh - 100px);
+}
+
+.labels {
+    display: inline-block;
+}
+
+.textInput {
+    resize: none;
+}
+
+.footer {
+    position: absolute; top: calc(100vh - 100px); right: 0; bottom: 0; left: 0;
+    color: black;
+    height: 50px;
+    background-color: lightgrey;
+}
+
+.ratingOutput {
+    height: calc(100vh - 62px);
+    width: 300px;
+    background: #eee;
+    float: left;
+    margin: 0px;
+    padding-bottom: 0px;
+}
+
+.ratingList {
+    width: 300px;
+    list-style-type: none;
+    padding-left: 0px;
 }
