@@ -6,3 +6,16 @@
 .ratingInput {
     max-width: 50%;
 }
+
+#map {
+    width:100%;
+    height:450px;
+}
+
+.labels {
+    display: inline-block;
+}
+
+.textInput {
+    resize: none;
+}

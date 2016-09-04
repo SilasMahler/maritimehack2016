@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,14 +9,20 @@
     <meta name="author" content="">
 
     <title>Full Width Pics - Start Bootstrap Template</title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full-width-pics.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body class="full">
 
@@ -46,6 +52,9 @@
                 <li>
                     <a href="contact.html">Contact</a>
                 </li>
+                <li>
+                    <a href="rating.html">Rating</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -55,7 +64,9 @@
 
 
 <div class="container content">
-    <label for="foodRating">Essen:</label>
+    <span class="row form-group">
+    <label for="foodRating" class="col-sm-2 control-label">Essen:</label>
+        <div class="col-sm-10">
 <select id="foodRating" class="form-control ratingInput">
     <option value="0" selected="selected">- nichts ausgwählt -</option>
     <option value="1">1</option>
@@ -64,8 +75,12 @@
     <option value="4">4</option>
     <option value="5">5</option>
 </select>
+            </div>
+    </span>
 
-    <label for="captainRating">Kapitän:</label>
+    <span class="row form-group">
+    <label for="captainRating" class="col-sm-2 control-label">Kapitän:</label>
+        <div class="col-sm-10">
     <select id="captainRating" class="form-control ratingInput">
         <option value="0" selected>- nichts ausgwählt -</option>
         <option value="1">1</option>
@@ -74,8 +89,12 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
+            </div>
+        </span>
 
-    <label for="cabinRating">Kajüte:</label>
+    <span class="row form-group">
+    <label for="cabinRating" class="col-sm-2 control-label">Kajüte:</label>
+        <div class="col-sm-10">
     <select id="cabinRating" class="form-control ratingInput">
         <option value="0" selected>- nichts ausgwählt -</option>
         <option value="1">1</option>
@@ -84,17 +103,28 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
+            </div>
+        </span>
+
+    <span class="row form-group">
+    <label for="resume" class="col-sm-2 control-label">Ihr Bericht:</label>
+        <div class="col-sm-10">
+    <textarea id="resume" class="form-control ratingInput textInput" rows="10">
+
+    </textarea>
+            </div>
+        </span>
 </div>
 
 <footer>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <p class="text-white">Made with &#9829; by DO!Hack 2016</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="text-white">Made with &#9829; by DO!Hack 2016</p>
+            </div>
         </div>
+        <!-- /.row -->
     </div>
-    <!-- /.row -->
-</div>
-<!-- /.container -->
+    <!-- /.container -->
 </footer>
 </body>

@@ -15,6 +15,7 @@
 
     <!-- Custom CSS -->
     <link href="css/full-width-pics.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,6 +54,9 @@
                 <li>
                     <a href="contact.html">Contact</a>
                 </li>
+                <li>
+                    <a href="rating.html">Rating</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -60,28 +64,11 @@
     <!-- /.container -->
 </nav>
 
-<!-- Full Width Image Header with Logo -->
-<!-- Image backgrounds are set within the full-width-pics.css file. -->
-<header>
-    <img class="img-responsive img-center" src="/img/vesseltrip.png" alt="">
-
-    <h1 class="text-white">Rate your Vessel</h1>
-    <form class="form-inline">
-        <div class="form-group">
-            <input class="form-control input-lg" type="search" placeholder="Type a MIU...">
-        </div>
-        <button class="btn btn-primary btn-lg">Go</button>
-
-    </form>
-
-</header>
-
-
 <!-- Content Section -->
 
 <button value="Login" ></button>
 
-
+<div id="map"></div>
 
 <!-- Footer -->
 <footer>
@@ -98,6 +85,8 @@
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+<script src="js/routes.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
