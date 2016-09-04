@@ -1,4 +1,4 @@
-function init() {
+function refreshData() {
     var ship = {
         id: number,
         name: String,
@@ -16,7 +16,20 @@ function init() {
         var content = JSON.parse(data);
     });
 
+    alert(content.length);
     for(var i = 0; i < content.length ; i++){
-        //TODO befülle tabelle
+        $("#ships_entries").appendChild(
+            '<tr> ' +
+            '<td>content[i].id ,</td>' +
+            '<td>Name: content[i].name ,</td>' +
+            '<td>Typ: content[i].type</td>' +
+            '<td>Length: content[i].length</td>' +
+            '<td>Beam: content[i].beam</td>' +
+            '<td>Manager: content[i].manager</td>' +
+            '<td>Owner: content[i].owner</td>' +
+            '<td>Insurer: content[i].insurer</td>' +
+            '<td>Eng_builder: content[i].eng_builder</td>' +
+            '</tr>'
+        )
     }
 }
