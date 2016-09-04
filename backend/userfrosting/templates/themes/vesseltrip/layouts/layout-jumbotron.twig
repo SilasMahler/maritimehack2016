@@ -24,22 +24,17 @@
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="{{site.uri.favicon}}" />
         
-        <!-- Page stylesheets -->
-        {% for item in includeCSS(page_group|default("common")) %}
-          <link rel="stylesheet" href="{{item}}" type="text/css" >
-        {% endfor %}
-        
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        
-        <!-- Header javascript (not recommended) -->
-        {% for item in includeJSTop(page_group|default("common")) %}
-          <script src="{{item}}" ></script>
-        {% endfor %}  
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full-width-pics.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
     </head>
     {% endblock %}
     <body>
@@ -55,21 +50,19 @@
     
     <footer>
         <div class="container">
-          <div class="row">
-              <div class="col-sm-6 text-center">
-                  &copy; <a href="{{site.uri.public}}">{{site.site_title}}</a>, {{ "now"|date("Y") }}
-              </div>
-              <div class="col-sm-6 text-center">
-                  Built with <a href="http://www.userfrosting.com">UserFrosting</a>.
-              </div>        
-          </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="text-white">Made with &#9829; by DO!Hack 2016</p>
+                </div>
+            </div>
         </div>
     </footer>
-    
-    <script src="{{site.uri.js}}/config.js" ></script>
-    {% for item in includeJSBottom(page_group|default("common")) %}
-      <script src="{{item}}" ></script>
-    {% endfor %}
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
     {# This block allows you to create page-specific Javascript in a child template #}
     {% block page_scripts %}{% endblock %}    
   </body>
