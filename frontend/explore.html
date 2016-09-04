@@ -22,6 +22,9 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="explore.js" type="javascript"></script>
 
 </head>
 
@@ -60,31 +63,34 @@
     <!-- /.container -->
 </nav>
 
-<!-- Full Width Image Header with Logo -->
-<!-- Image backgrounds are set within the full-width-pics.css file. -->
-<header>
-    <img class="img-responsive img-center" src="/img/vesseltrip.png" alt="">
-
-    <h1 class="text-white">Rate your Vessel</h1>
-    <form class="form-inline">
-        <div class="form-group">
-            <input class="form-control input-lg" type="search" placeholder="Type a MIU...">
-        </div>
-        <button class="btn btn-primary btn-lg">Go</button>
-
-    </form>
-
-</header>
-
-
+<div class="row"></div>
 <!-- Content Section -->
 
 Explore the Data thats available!
 
-...
+<button class="btn btn-default" onclick="refreshData()">Refresh Data</button>
 
-
-
+<div id="ships" class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Length</th>
+            <th>Beam</th>
+            <th>Manager</th>
+            <th>Owner</th>
+            <th>Insurer</th>
+            <th>Eng_Builder</th>
+        </tr>
+        </thead>
+        <tbody id="ships_entries">
+        </tbody>
+    </table>
+</div>
+</div>
 
 <!-- Footer -->
 <footer>
@@ -98,12 +104,6 @@ Explore the Data thats available!
     </div>
     <!-- /.container -->
 </footer>
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
 
 </body>
 
