@@ -63,6 +63,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="{{site.uri.js}}/config.js" ></script>
+    {% for item in includeJSBottom(page_group|default("common")) %}
+        <script src="{{item}}" ></script>
+    {% endfor %}
     {# This block allows you to create page-specific Javascript in a child template #}
     {% block page_scripts %}{% endblock %}    
   </body>
