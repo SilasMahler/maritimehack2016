@@ -24,7 +24,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="full">
+<body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -62,60 +62,64 @@
     <!-- /.container -->
 </nav>
 
-
-<div class="container content">
-    <span class="row form-group">
-    <label for="foodRating" class="col-sm-2 control-label">Essen:</label>
-        <div class="col-sm-10">
-<select id="foodRating" class="form-control ratingInput">
-    <option value="0" selected="selected">- nichts ausgwählt -</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-</select>
+<header>
+<div class="container">
+    <h1>Vessel No.X <!-- insert Vessel name --> </h1>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="foodRating" class="col-sm-2 control-label">Essen:</label>
+            <div class="col-sm-10">
+                <select id="foodRating" class="form-control ratingInput">
+                    <option value="0" selected="selected">- nichts ausgwählt -</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
             </div>
-    </span>
+        </div>
 
-    <span class="row form-group">
-    <label for="captainRating" class="col-sm-2 control-label">Kapitän:</label>
-        <div class="col-sm-10">
-    <select id="captainRating" class="form-control ratingInput">
-        <option value="0" selected>- nichts ausgwählt -</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>
+
+        <div class="form-group">
+            <label for="captainRating" class="col-sm-2 control-label">Kapitän:</label>
+            <div class="col-sm-10">
+                <select id="captainRating" class="form-control ratingInput">
+                    <option value="0" selected>- nichts ausgwählt -</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
             </div>
-        </span>
+        </div>
 
-    <span class="row form-group">
-    <label for="cabinRating" class="col-sm-2 control-label">Kajüte:</label>
-        <div class="col-sm-10">
-    <select id="cabinRating" class="form-control ratingInput">
-        <option value="0" selected>- nichts ausgwählt -</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>
+        <div class="form-group">
+            <label for="cabinRating" class="col-sm-2 control-label">Kajüte:</label>
+            <div class="col-sm-10">
+                <select id="cabinRating" class="form-control ratingInput">
+                    <option value="0" selected>- nichts ausgwählt -</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
             </div>
-        </span>
+        </div>
 
-    <span class="row form-group">
-    <label for="resume" class="col-sm-2 control-label">Ihr Bericht:</label>
-        <div class="col-sm-10">
+        <div class="form-group">
+            <label for="resume" class="col-sm-2 control-label">Ihr Bericht:</label>
+            <div class="col-sm-10">
     <textarea id="resume" class="form-control ratingInput textInput" rows="10">
 
     </textarea>
             </div>
-        </span>
+        </div>
+    </form>
 </div>
-
+</header>
 <footer class="footer">
     <div class="container">
         <div class="row">
