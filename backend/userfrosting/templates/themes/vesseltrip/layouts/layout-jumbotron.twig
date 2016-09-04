@@ -50,21 +50,19 @@
     
     <footer>
         <div class="container">
-          <div class="row">
-              <div class="col-sm-6 text-center">
-                  &copy; <a href="{{site.uri.public}}">{{site.site_title}}</a>, {{ "now"|date("Y") }}
-              </div>
-              <div class="col-sm-6 text-center">
-                  Built with <a href="http://www.userfrosting.com">UserFrosting</a>.
-              </div>        
-          </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="text-white">Made with &#9829; by DO!Hack 2016</p>
+                </div>
+            </div>
         </div>
     </footer>
-    
-    <script src="{{site.uri.js}}/config.js" ></script>
-    {% for item in includeJSBottom(page_group|default("common")) %}
-      <script src="{{item}}" ></script>
-    {% endfor %}
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
     {# This block allows you to create page-specific Javascript in a child template #}
     {% block page_scripts %}{% endblock %}    
   </body>
