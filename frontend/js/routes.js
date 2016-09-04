@@ -1,15 +1,15 @@
 function initialize() {
   var mapProp = {
-    center: new google.maps.LatLng(53.0419921875, 53.31774904749089),
-    zoom: 5,
+    center: new google.maps.LatLng(53.5419921875, 10.31774904749089),
+    zoom: 8,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
   var map = new google.maps.Map(document.getElementById("map"), mapProp);
 
   map.data.setStyle({
-    strokeColor: 'green',
-    strokeOpacity: 0.3,
+    strokeColor: 'red',
+    strokeOpacity: 0.8,
     strokeWeight: 5
   });
 
