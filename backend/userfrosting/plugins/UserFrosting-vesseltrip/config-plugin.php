@@ -63,3 +63,7 @@ $app->get('/ports/?', function () use ($controller) {
 $app->get('/vessels/?', function () use ($controller) {
     $controller->viewVessels();
 });
+
+$app->post('/createTrip/?', function () use ($controller) {
+    $controller->createTrip();
+});

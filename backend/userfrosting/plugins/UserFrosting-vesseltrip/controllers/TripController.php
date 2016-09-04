@@ -8,31 +8,38 @@ class TripController extends \UserFrosting\BaseController {
     }
 
     public function viewTrips() {
-        echo '{"type": "FeatureCollection", "features": [';
+        $resp = '{"type": "FeatureCollection", "features": [';
         
         $i = 1;
         $trips = Trip::all();
         foreach($trips as $trip) {
-            echo '{"type": "Feature", "properties": {"name": "' . \UserFrosting\User::find($trip->user_id)->display_name . '"}, "geometry": {"type": "LineString", "coordinates": [';
+            $resp .= '{"type": "Feature", "properties": {"name": "' . \UserFrosting\User::find($trip->user_id)->display_name . '"}, "geometry": {"type": "LineString", "coordinates": [';
             
             $j = 1;
             $ports = $trip->relationsOrdered();
             foreach($ports as $port) {
                 $port = $port->port();
-                echo '[' . $port->lat . ', ' . $port->lon . ']' . (($j++ != count($ports)) ? ', ' : '');
+                $resp .= '[' . $port->lat . ', ' . $port->lon . ']' . (($j++ != count($ports)) ? ', ' : '');
             }
             
-            echo ']}}' . (($i++ != count($trips)) ? ', ' : '');
+            $resp .= ']}}' . (($i++ != count($trips)) ? ', ' : '');
         }
         
-        echo ']}';
+        $resp .= ']}';
+        
+        echo $resp;
     }
 
     public function viewPorts() {
-        echo json_encode(Port::all());
+        echo json_encode(Port::all(), JSON_PRETTY_PRINT);
     }
 
     public function viewVessels() {
-        echo json_encode(Vessel::all());
+        echo json_encode(Vessel::all(), JSON_PRETTY_PRINT);
+    }
+    
+    public function createTrip() {
+        $post = $this->_app->request->post();
+        var_dump($post);
     }
 }
