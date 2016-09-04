@@ -13,14 +13,18 @@
     {{ parent() }}
 {% endblock %}
 
-{% block content %}    
-    <h1>Welcome to {{site.site_title}}!</h1>
-    <p class="lead">A secure, modern user management system based on the Slim Framework and the Twig templating engine.</p>
-    {% include 'components/common/alerts.twig' %}	
-    <div class="row">
-        <div class="col-sm-12">
-          <a href="{{site.uri.public}}/account/login" class="btn btn-success" role="button" value="Login">Login</a>
-        </div>
-    </div>
-    {% include 'components/jumbotron/jumbotron-links.twig' %}	
+{% block content %}
+    <header>
+        <img class="img-responsive img-center" src="/img/vesseltrip.png" alt="">
+
+        <h1 class="text-white">Rate your Vessel</h1>
+        <form class="form-inline">
+            <div class="form-group">
+                <input class="form-control input-lg" type="search" placeholder="Type a MIU...">
+            </div>
+            <button class="btn btn-primary btn-lg">Go</button>
+
+        </form>
+
+    </header>
 {% endblock %}
