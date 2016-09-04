@@ -1,35 +1,49 @@
 function refreshData() {
     var ship = {
-        id: number,
+        id: String,
         name: String,
         typ: String,
         length: String,
-        beam: number,
+        beam: String,
         manager: String,
         owner: String,
         insurer: String,
         eng_builder: String
     }
 
-
     $.get("https://vesseltrip.schroeer.co/vessels", function (data, status) {
         var content = JSON.parse(data);
+        for (var i = 0; i < content.length; i++) {
+            $("#ships_entries").append(
+                '<tr> ' +
+                '<td></td>' +
+                '<td>' + content[i].id + '</td>' +
+                '<td>' + content[i].name + '</td>' +
+                '<td>' + content[i].type + '</td>' +
+                '<td>' + content[i].length + '</td>' +
+                '<td>' + content[i].beam + '</td>' +
+                '<td>' + content[i].manager + '</td>' +
+                '<td>' + content[i].owner + ' </td>' +
+                '<td>' + content[i].insurer + '</td>' +
+                '<td>' + content[i].eng_builder + '</td>' +
+                '</tr>'
+            )
+        }
     });
 
-    alert(content.length);
-    for(var i = 0; i < content.length ; i++){
-        $("#ships_entries").appendChild(
-            '<tr> ' +
-            '<td>content[i].id ,</td>' +
-            '<td>Name: content[i].name ,</td>' +
-            '<td>Typ: content[i].type</td>' +
-            '<td>Length: content[i].length</td>' +
-            '<td>Beam: content[i].beam</td>' +
-            '<td>Manager: content[i].manager</td>' +
-            '<td>Owner: content[i].owner</td>' +
-            '<td>Insurer: content[i].insurer</td>' +
-            '<td>Eng_builder: content[i].eng_builder</td>' +
-            '</tr>'
-        )
-    }
+    $.get("https://vesseltrip.schroeer.co/ports", function (data, status) {
+        var content = JSON.parse(data);
+        for (var i = 0; i < content.length; i++) {
+            $("#ports_entries").append(
+                '<tr> ' +
+                '<td></td>' +
+                '<td>' + content[i].id + '</td>' +
+                '<td>' + content[i].name + '</td>' +
+                '<td>' + content[i].longitude + '</td>' +
+                '<td>' + content[i].latitude + '</td>' +
+                '</tr>'
+            )
+        }
+    });
 }
+document.onload(refreshData());
