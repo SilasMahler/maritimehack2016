@@ -20,5 +20,3 @@ function init() {
         //TODO befülle tabelle
     }
 }
-
-google.maps.event.addDomListener(window, 'load', initialize);
